@@ -128,11 +128,11 @@ $.get(urlLast30, function(data) {
 });
 
 //INDONESIA DETAILS
-$(".covid-data-detail").append('<tr class="lead center">' +
-  '<td class="column-title full">Province</td>' +
-  '<td class="column-title data">Total</td>' +
-  '<td class="column-title data">Deaths</td>' +
-  '<td class="column-title data">Recovered</td>' +
+$(".covid-data-detail").append('<tr class="center">' +
+  '<td class="column-title data column-1 full">Province</td>' +
+  '<td class="column-title data column-2">Total</td>' +
+  '<td class="column-title data column-3">Deaths</td>' +
+  '<td class="column-title data column-4">Recovered</td>' +
   '</tr>');
 
 const url = "https://services5.arcgis.com/VS6HdKS0VfIhv8Ct/arcgis/rest/services/COVID19_Indonesia_per_Provinsi/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=json";
@@ -148,14 +148,14 @@ $.get(url, function(data) {
 
     if (i % 2 === 0) {
       $(".covid-data-detail").append('<tr class="small lead center">' +
-        '<td class="column center">' + provinsi + '</td>' +
+        '<td class="column data">' + provinsi + '</td>' +
         '<td class="column data">' + kasusPositif + '</td>' +
         '<td class="column data">' + kasusMeninggal + '</td>' +
         '<td class="column data">' + kasusSembuh + '</td>' +
         '</tr>');
     } else {
       $(".covid-data-detail").append('<tr class="small lead center gray">' +
-        '<td class="column center">' + provinsi + '</td>' +
+        '<td class="column data">' + provinsi + '</td>' +
         '<td class="column data">' + kasusPositif + '</td>' +
         '<td class="column data">' + kasusMeninggal + '</td>' +
         '<td class="column data">' + kasusSembuh + '</td>' +

@@ -1,6 +1,12 @@
 .center{
   text-align: center;
 }
+
+.bold{
+  font-weight: bolder;
+}
+
+/*JUMBOTRON*/
 .title{
   color:#FF7C7C;
 }
@@ -9,10 +15,12 @@
   margin-top: 3%;
 }
 
-.btn{
-  font-size: 2rem;
-  margin-top: 5%;
+/*OVERALL SECTION */
+.total-num{
+  margin-bottom: 3%;
 }
+
+/*TODAY's SECTION*/
 .red{
   background-color: #FF7C7C;
 }
@@ -30,9 +38,44 @@
   padding : 10px 0 10px 0;
   border-radius: 3%;
 }
+
+
+/*CHART*/
+.chart-graph{
+  margin : 0 auto;
+}
+#container1{
+  width: 500px;
+  height: 500px;
+}
+#container{
+  width: 500px;
+  height: 500px;
+}
+
+@media only screen and (max-width: 600px) {
+  #container1{
+    width: 350px;
+    height: 300px;
+  }
+  #container{
+    width: 400px;
+    height: 300px;
+  }
+}
+
+
+
+
 .full{
   width: 100%;
 }
+.btn{
+  font-size: 1.5rem;
+  margin-top: 5%;
+}
+
+
 
 .today-total{
   margin-top: 5%;
@@ -41,14 +84,10 @@
 .totals{
   margin-top: 12%;
 }
-.total-num{
-  margin-bottom: 3%;
-}
 
 
 .column{
   color: #293B5F;
-  padding : 5px 10px 5px 5px;
 }
 
 .column-title{
@@ -57,6 +96,7 @@
   font-weight: 400;
   padding-top: 1%;
   padding-bottom: 1%;
+  font-size: 1rem;
 
 }
 .table-font{
@@ -65,17 +105,16 @@
 .section-title{
   margin-top: 1%;
 }
-.bold{
-  font-weight: bolder;
-}
+
 
 .small{
   font-size: 1rem;
 }
 
+
+
 .data{
-  padding-right: 30px;
-  padding-left: 30px;
+  padding:5px 10px;
 }
 
 .gray{
@@ -86,19 +125,17 @@
   width: 100%;
 }
 
-/*chart*/
-
-.chart-graph{
-  margin : 0 auto;
-}
-.graph-title{
-  margin-left: 20%;
-}
-
 
 .footer{
   background-color: #334257;
   color: white;
   padding-top: 50px;
   padding-bottom: 40px;
+}
+
+/*MOBILE RESPONSIVE*/
+@media only screen and (max-width: 600px) {
+  .small{
+    font-size: 0.7rem;
+  }
 }
