@@ -1,3 +1,6 @@
+
+
+
 const urlIndonesia = "https://disease.sh/v3/covid-19/countries/Indonesia?strict=true";
 //https://disease.sh/v3/covid-19/countries/Indonesia?strict=true
 $.get(urlIndonesia, function(data) {
@@ -61,7 +64,8 @@ $.get(urlLast30, function(data) {
   var values = [];
   let last30Length = Object.keys(data.timeline.cases).length;
 
-  Object.keys(data.timeline.cases).map(function(date) {
+  //run thru all array data and push it one by one to the corresponding array
+  Object.keys(data.timeline.cases).map(function(date){
     dates.push(date);
     values.push(data.timeline.cases[date]);
 
@@ -129,22 +133,21 @@ $.get(urlLast30, function(data) {
 
 //INDONESIA DETAILS
 $(".covid-data-detail").append('<tr class="center">' +
-  '<td class="column-title data column-1 full">Province</td>' +
+  '<td class="column-title data column-1 full">Countries</td>' +
   '<td class="column-title data column-2">Total</td>' +
   '<td class="column-title data column-3">Deaths</td>' +
   '<td class="column-title data column-4">Recovered</td>' +
   '</tr>');
 
-const url = "https://services5.arcgis.com/VS6HdKS0VfIhv8Ct/arcgis/rest/services/COVID19_Indonesia_per_Provinsi/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=json";
+const url = "https://disease.sh/v3/covid-19/countries?yesterday=true";
 $.get(url, function(data) {
-  const covidData = JSON.parse(data); //turn data in json format
-  var arraylength = covidData.features.length;
+  var arraylength = data.length;
 
   for (var i = 0; i < arraylength - 1; i++) {
-    var provinsi = covidData.features[i].attributes.Provinsi;
-    var kasusPositif = covidData.features[i].attributes.Kasus_Posi;
-    var kasusMeninggal = covidData.features[i].attributes.Kasus_Meni;
-    var kasusSembuh = covidData.features[i].attributes.Kasus_Semb;
+    var provinsi = data[i].country;
+    var kasusPositif = data[i].cases;
+    var kasusMeninggal = data[i].deaths;
+    var kasusSembuh = data[i].recovered;
 
     if (i % 2 === 0) {
       $(".covid-data-detail").append('<tr class="small lead center">' +
@@ -169,3 +172,5 @@ $(".dropdown").hide();
 $(".province").on("click", function() {
   $(".dropdown").slideToggle();
 });
+
+//96fec9e87fc148a8b2b555368895232f api news

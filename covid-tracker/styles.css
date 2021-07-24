@@ -9,6 +9,7 @@
 /*JUMBOTRON*/
 .title{
   color:#FF7C7C;
+  font-size: 4rem;
 }
 
 .total-title{
@@ -72,9 +73,7 @@
 }
 .btn{
   font-size: 1.5rem;
-  margin-top: 5%;
 }
-
 
 
 .today-total{
@@ -137,5 +136,8 @@
 @media only screen and (max-width: 600px) {
   .small{
     font-size: 0.7rem;
+  }
+  .title{
+    font-size: 3rem;
   }
 }
