@@ -1,0 +1,185 @@
+body{
+  overflow : scroll;
+}
+
+.heading{
+  background-color: #FFE194;
+  font-family: 'Caveat', cursive;
+  color:brown;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.middle{
+  text-align: center;
+}
+
+.btn{
+  font-size: 2rem;
+  position: relative;
+  z-index:3
+}
+.subhead{
+  font-family: 'Caveat', cursive;
+  margin-top: 80px;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.pp{
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+.title{
+  font-size: 5rem;
+}
+.desc{
+  font-size:2rem;
+}
+
+.cake{
+  width: 100px;
+  height: 100px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.age{
+  font-size: 6rem;
+  font-weight: bold;
+  color:red;
+  text-shadow: 5px 5px yellow;
+}
+
+#confettis {
+  overflow: hidden;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.confetti {
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  transform-origin: left top;
+  animation: confetti 5s ease-in-out -2s infinite;
+  position: absolute;
+}
+
+@keyframes confetti {
+  0% {
+    transform: rotateZ(15deg) rotateY(0deg) translate(0, 0);
+  }
+  25% {
+    transform: rotateZ(5deg) rotateY(360deg) translate(-5vw, 20vh);
+  }
+  50% {
+    transform: rotateZ(15deg) rotateY(720deg) translate(5vw, 60vh);
+  }
+  75% {
+    transform: rotateZ(5deg) rotateY(1080deg) translate(-10vw, 80vh);
+  }
+  100% {
+    transform: rotateZ(15deg) rotateY(1440deg) translate(10vw, 110vh);
+  }
+}
+
+.confetti:nth-child(1) {
+  left: 10%;
+  animation-delay: 0;
+  background-color: #fc0120;
+}
+
+.confetti:nth-child(2) {
+  left: 20%;
+  animation-delay: -5s;
+  background-color: #8257e6;
+}
+
+.confetti:nth-child(3) {
+  left: 30%;
+  animation-delay: -3s;
+  background-color: #ffbf4d;
+}
+
+.confetti:nth-child(4) {
+  left: 40%;
+  animation-delay: -2.5s;
+  background-color: #fe5d7a;
+}
+
+.confetti:nth-child(5) {
+  left: 50%;
+  animation-delay: -4s;
+  background-color: #45ec9c;
+}
+
+.confetti:nth-child(6) {
+  left: 60%;
+  animation-delay: -6s;
+  background-color: #f6e327;
+}
+
+.confetti:nth-child(7) {
+  left: 70%;
+  animation-delay: -1.5s;
+  background-color: #f769ce;
+}
+
+.confetti:nth-child(8) {
+  left: 80%;
+  animation-delay: -2s;
+  background-color: #007de7;
+}
+
+.confetti:nth-child(9) {
+  left: 90%;
+  animation-delay: -3.5s;
+  background-color: #63b4fc;
+}
+
+.confetti:nth-child(10) {
+  left: 100%;
+  animation-delay: -2.5s;
+  background-color: #f9c4ea;
+}
+
+.questions{
+  margin: 0 50px;
+}
+
+.dogimg{
+  height: 315px;
+}
+
+.traits{
+  margin-top: 30px;
+    font-family: 'Caveat', cursive;
+    font-size: 2rem;
+}
+.wish{
+  margin: 0 10%;
+  font-size: 1.5rem;
+    text-align: center;
+}
+
+.verse{
+  margin: 50px 10%;
+  text-align: center;
+}
+
+.wishes{
+  background-color: #FDFCE5;
+  margin: 60px 0 0 0;
+  padding:20px 0;
+}
+
+.song{
+  margin: 0 auto 50px auto;
+  text-align: center;
+  display: block;
+}
