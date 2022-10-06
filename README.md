@@ -1,3 +1,3 @@
 # brebribre.github.io
 
-First big JavaScript project, currently learning about API and just finished my front-end online course.
+Javascript project that utilizes API-Calls to get Covid-19 Data from the Indonesian government and WHO.
